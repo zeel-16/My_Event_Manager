@@ -1,0 +1,24 @@
+# WordPress specific ignores
+.DS_Store
+.idea/
+.vscode/
+Thumbs.db
+*.log
+*.bak
+*.tmp
+*.swp
+*.swo
+*~
+*.sublime-project
+*.sublime-workspace
+npm-debug.log
+.sass-cache/
+.bowerrc
+node_modules/
+bower_components/
+vendor/ # If you use Composer, this folder might be large
+wp-config.php # IMPORTANT: DO NOT UPLOAD THIS IF IT'S IN YOUR PLUGIN ROOT (unlikely but worth noting)
+# If you ever had a local database file or other sensitive data
+*.sql
+*.sqlite
+.env
