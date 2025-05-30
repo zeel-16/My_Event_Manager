@@ -64,7 +64,7 @@ class My_Event_Manager {
         load_plugin_textdomain(
             'my-event-manager', // Your text domain
             false,
-            dirname( plugin_basename( __FILE__ ) ) . '/languages/' // Path to translations (make sure this folder exists)
+            dirname( plugin_basename( __FILE__ ) ) . '/languages/' // Path to translations
         );
     }
 
@@ -73,8 +73,8 @@ class My_Event_Manager {
      * Registers CPTs and flushes rewrite rules to ensure URLs work immediately.
      */
     public function activate() {
-        $this->register_event_cpt(); // Ensure CPT is registered before flushing.
-        $this->register_event_category_taxonomy(); // Ensure taxonomy is registered.
+        $this->register_event_cpt(); 
+        $this->register_event_category_taxonomy(); 
         flush_rewrite_rules();
     }
 
@@ -125,7 +125,7 @@ class My_Event_Manager {
             'description'           => __( 'Manage and display events', 'my-event-manager' ),
             'labels'                => $labels,
             'supports'              => array( 'title', 'editor', 'thumbnail' ),
-            'taxonomies'            => array( 'event_category' ), // Link CPT to your new taxonomy
+            'taxonomies'            => array( 'event_category' ), 
             'hierarchical'          => false,
             'public'                => true,
             'show_ui'               => true,
